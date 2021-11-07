@@ -5,7 +5,7 @@ This is the GitHub repository for the python code used to model High Pressure Me
 
 ![HPMI_Image](HPMI.png)
 
-The following animated image illustrates how this software operates. We start with the original HPMI data. The first step is to locate the point on the HPMI curve that represents the point where real data begins and not the HPMI data representing surface conformance of the plug sample. We also select the Initial Displacement Pressure (Pd1) for the sample. This is done with a click on the Graphical User Interface (GUI) where this occurs. 
+The following animated image illustrates how this software operates. We start with the original HPMI data. The first step is to locate the point on the HPMI curve that represents the point where real data begins and not the HPMI data representing surface conformance around the plug sample. We also select the Initial Displacement Pressure (Pd1) for the sample for the first pore system. We find that most carbonate rock has bi-modal pore throat distributions representing two pore systems as shown in this example. The selection of this point is done with a click on the Graphical User Interface (GUI) where this occurs. The second step pick the point for the Bulk Volume for the first pore system (BV1) and the Initial Displacement Pressure for the second pore system (Pd2).
 
 The second step pick the point for the Bulk Volume for the first pore system (BV1) and the Initial Displacement Pressure for the second pore system (Pd2).
 
