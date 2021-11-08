@@ -22,7 +22,8 @@ This program uses Scipy Optimize Curve_fit to estimate the appropriate Thomeer p
             Pd1 = 9.24  ,  G1 = 0.51 , BV1 = 10.04
             Pd2 = 413.6 ,  G2 = 0.24 , BV2 = 2.555
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Reservoir Characterization Workflow:
 We are using the HPMI data from just one sample for this example. Our objective will be to employ this program in Geolog as a python loglan. In Geolog we will read the Pc data in from the SCAL data stored in a well and write the results for each sample back to Geolog to build our sample-by-sample core calibration database. We would then use the carbonate characterization workflow as employed in our following GitHub repository but alter the workflow to employ our own new reservoir-specific calibration data for our reservoir characterization.
 
 https://github.com/Philliec459/Geolog-Used-to-Automate-the-Characterization-Workflow-using-Clerkes-Rosetta-Stone-calibration-data
@@ -31,7 +32,7 @@ In the above workflows we have used hundreds of HPMI samples as calibration. In 
 
 ![HPMI_Image](geolog_altair_thomeer.gif)
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Modeling of Saturations Thomeer Capillary Pressure Parameters: 
 Also, the following image shows one example from our modeling of saturations from Capillary Pressure vs. log analysis. The match is very good. I personally have performed this type of characterization on at least 30 huge carbonate oil fields in Saudi, and the results shown below are very typical.
 
 ![HPMI_Image](logsats.gif)
