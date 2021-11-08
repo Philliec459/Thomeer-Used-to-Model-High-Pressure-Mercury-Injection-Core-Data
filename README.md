@@ -31,6 +31,7 @@ In the above workflows we have used hundreds of HPMI samples as calibration. In 
 
 ![HPMI_Image](geolog_altair_thomeer.gif)
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Also, the following image shows one example from our modeling of saturations from Capillary Pressure vs. log analysis. The match is very good. I personally have performed this type of characterization on at least 30 huge carbonate oil fields in Saudi, and the results shown below are very typical.
 
 ![HPMI_Image](logsats.gif)
