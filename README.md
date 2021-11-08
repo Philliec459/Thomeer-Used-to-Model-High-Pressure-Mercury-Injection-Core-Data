@@ -1,11 +1,12 @@
 # Thomeer-Used-to-Model-High-Pressure-Mercury-Injection-Data
 In this repository we provide the python code used to Closure correct and model High Pressure Mercury Injection (HPMI) data using the Thomeer hyperbola.
 
+## Introduction:
 This GitHub repository uses python code to import High Pressure Mercury Injection (HPMI) Core data fron Excel and then use a Thomeer hyperbola to model the Thomeer Capillary Pressure parameters as shown below. Ed Clerke used a similar method in Excel with Solver to estimate his Thomeer parameters for each HPMI sample that went into the Rosetta Stone Arab D Carbonate Thomeer database. His Excel spreadsheet is readily available, and we will included as copy of this spreadsheet in this repository. We also used fminsearch in Matlab too. We have used these types of software to establish our own Reservoir Characterization Reservoir-Specific core calibration databases in the past for a reservoir-specific studies.
 
 ![HPMI_Image](HPMI.png)
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## How it Works:
 The following animated image illustrates how this software operates. We start with the original HPMI data. The first step is to locate the point on the HPMI curve that represents the point where real data begins and not the HPMI data representing surface conformance around the plug sample. We also select the Initial Displacement Pressure (Pd1) for the sample for the first pore system too. We find that most carbonate rocks have bi-modal pore throat distributions representing two pore systems as shown in the example below. The selection of this point is performed with just a click on the Graphical User Interface (GUI) where this occurs. 
 
 For the second step we pick the point for the Bulk Volume porosity of the first pore system (BV1) as well as the Initial Displacement Pressure for the second pore system (Pd2).
@@ -32,7 +33,7 @@ In the above workflows we have used hundreds of HPMI samples as calibration. In 
 
 ![HPMI_Image](geolog_altair_thomeer.gif)
 
-## Modeling of Saturations Thomeer Capillary Pressure Parameters: 
+## Modeling of Saturations Using Thomeer Capillary Pressure Parameters: 
 Also, the following image shows one example from our modeling of saturations from Capillary Pressure vs. log analysis. The match is very good. I personally have performed this type of characterization on at least 30 huge carbonate oil fields in Saudi, and the results shown below are very typical.
 
 ![HPMI_Image](logsats.gif)
