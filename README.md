@@ -17,9 +17,10 @@ The third step is to select the Total porosity for the HPMI data called BVtotal 
 
 This program uses Scipy Optimize Curve_fit to estimate the appropriate Thomeer parameters necessary to model the HPMI data. The points selected from the GUIs are used to estimate boundary conditions for these estimations, and the estimations for this example are shown below:
 
-            Thomeer Parameters Estimated from Example 1 HPMI Data:
-            Pd1 = 9.05 ,  G1 = 0.51 , BV1 = 9.97
-            Pd2 = 374.4 , G2 = 0.25 , BV2 = 3.63
+            Thomeer Parameters Estimated from Imported HPMI Data:
+            Pd1 = 9.24  ,  G1 = 0.51 , BV1 = 10.04
+            Pd2 = 413.6 ,  G2 = 0.24 , BV2 = 2.555
+
 
 We are using the HPMI data from just one sample for this example. Our objective will be to employ this program in Geolog as a python loglan. In Geolog we will read the Pc data in from the SCAL data stored in a well and write the results for each sample back to Geolog to build our sample-by-sample core calibration database. We would then use the carbonate characterization workflow as employed in our following GitHub repository but alter the workflow to employ our own new reservoir-specific calibration data for our reservoir characterization.
 
