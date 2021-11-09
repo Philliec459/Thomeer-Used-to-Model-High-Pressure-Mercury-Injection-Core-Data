@@ -20,8 +20,8 @@ The third step is to select the Total porosity for the HPMI data called BVtotal 
 This program uses Scipy Optimize Curve_fit to estimate the appropriate Thomeer parameters necessary to model the HPMI data. The points selected from the GUIs are used to estimate boundary conditions for these estimations, and the estimations for this example are shown below:
 
             Thomeer Parameters Estimated from Imported HPMI Data:
-            Pd1 = 9.24  ,  G1 = 0.51 , BV1 = 10.04
-            Pd2 = 413.6 ,  G2 = 0.24 , BV2 = 2.555
+            Pd1 = 8.67  ,  G1 = 0.54 , BV1 = 10.13
+            Pd2 = 389.1 ,  G2 = 0.24 , BV2 = 3.71
 
 
 ## Reservoir Characterization Workflow:
