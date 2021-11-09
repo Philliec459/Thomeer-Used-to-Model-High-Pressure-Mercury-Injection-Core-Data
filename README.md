@@ -21,7 +21,7 @@ This program uses Scipy Optimize Curve_fit to estimate the appropriate Thomeer p
 
             Thomeer Parameters Estimated from Imported HPMI Data:
             Pd1 = 8.67  ,  G1 = 0.54 , BV1 = 10.13
-            Pd2 = 389.1 ,  G2 = 0.24 , BV2 = 3.71
+            Pd2 = 389.1 ,  G2 = 0.24 , BV2 = 4.8
 
 
 ## Reservoir Characterization Workflow:
