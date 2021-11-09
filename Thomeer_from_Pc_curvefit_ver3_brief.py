@@ -252,6 +252,7 @@ xdata=np.array(pcarray_pore1)
 
 def func(xdata, a, b, c):
     return a*10**((-0.434*b)/np.log10(xdata/c))
+#    return a*pow(10,((-0.434*b)/np.log10(xdata/c)))
 
 
 #popt, pcov = curve_fit(func, ydata, xdata, bounds=([Pd1*0.5, 0.01, BV1*0.5], [Pd1*1.5, 3., BV1*2]))
@@ -289,7 +290,7 @@ xdata2=np.array(pcarray_pore2)
 
 def func(xdata2, a, b, c):
     return a*10**((-0.434*b)/np.log10(xdata2/c))
-
+#    return a*pow(10,((-0.434*b)/np.log10(xdata/c)))
 
 #popt, pcov = curve_fit(func, ydata2, xdata2, bounds=([1, 0.01, 0.0], [30000., 3., 100.]))
 popt, pcov = curve_fit(func, ydata, xdata, bounds=([Pd2*0.5, 0.01, (BVtotal-BV1)*0.5], [Pd2*1.5, 0.5, (BVtotal-BV1)*2]))
@@ -521,7 +522,20 @@ class PlotCanvas(FigureCanvas):
 #        ax.annotate('G1', fontsize=10, color='green', xy=(1, 100), xytext=(1,100),
 ##            arrowprops=dict(facecolor='green', shrink=1),
 #            )
-
+        ax.text(40,3.3  , 'Thomeer Parameter Estimates from Scipy Curve_Fit:', horizontalalignment='left', fontsize=12, fontweight="bold",color='blue')
+        ax.text(40,2.2  , 'Pd1 =', horizontalalignment='left', fontsize=10, fontweight="bold",color='red')
+        ax.text(28,2.2  , Pd1_solve, horizontalalignment='left', fontsize=10, fontweight="bold",color='red')
+        ax.text(6,2.2   , ', G1 =', horizontalalignment='left', fontsize=10, fontweight="bold",color='red')
+        ax.text(4,2.2   , G1_solve, horizontalalignment='left', fontsize=10, fontweight="bold",color='red')
+        ax.text(0.8,2.2 ,', BV1 = ', horizontalalignment='left', fontsize=10, fontweight="bold",color='red')
+        ax.text(0.5,2.2 , BV1_solve, horizontalalignment='left', fontsize=10, fontweight="bold",color='red')
+ 
+        ax.text(40,1.5  , 'Pd2 =', horizontalalignment='left', fontsize=10, fontweight="bold",color='brown')
+        ax.text(28,1.5  , Pd2_solve, horizontalalignment='left', fontsize=10, fontweight="bold",color='brown')
+        ax.text(6,1.5   , ', G2 =', horizontalalignment='left', fontsize=10, fontweight="bold",color='brown')
+        ax.text(4,1.5   , G2_solve, horizontalalignment='left', fontsize=10, fontweight="bold",color='brown')
+        ax.text(0.8,1.5 ,', BV2 = ', horizontalalignment='left', fontsize=10, fontweight="bold",color='brown')
+        ax.text(0.5,1.5 , BV2_solve, horizontalalignment='left', fontsize=10, fontweight="bold",color='brown')
 
  
         self.draw()
@@ -536,20 +550,3 @@ if __name__ == '__main__':
     
     
     
-    #    timer = QTimer()
-#    timer.timeout.connect(lambda: None)
-#    timer.start(100)
-#    win = QMainWindow()
-#    win.show()
-#    ok = win.login()
-#    if ok:
-#        sys.exit(app.exec_())
-
-    
-    #time.sleep(6)
-    #quit
-#    time.sleep(5.5)    # pause 5.5 seconds            
-#    sys.exit()
-#    time.sleep(5.5)    # pause 5.5 seconds
-#    exit
-
