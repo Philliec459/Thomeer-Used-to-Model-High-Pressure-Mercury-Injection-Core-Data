@@ -31,7 +31,7 @@ https://github.com/Philliec459/Geolog-Used-to-Automate-the-Characterization-Work
 
 In the above workflows we have used hundreds of HPMI samples as calibration. In the image below we are showing the Porosity vs. Permeability cross plot in the upper left for all the calibration samples used for the Arab D reservoir; all colored by Petrophysical Rock Type. We select a small group of poro-perm samples, and the Pc curves from this small group of selected samples is then shown in the lower left. The black Pc curve is the upscaled Pc curve from the selected samples. We would be using upscaled Pc curves that varies level by level in the well to model saturations because of the changing reservoir quality along the wellbore.
 
-![HPMI_Image](geolog_altair_thomeer.gif)
+![HPMI_Image](Thomeer_Pc_and_Thomeer_Parameters.gif)
 
 ## Modeling of Saturations Using Thomeer Capillary Pressure Parameters: 
 Also, the following image shows one example from our modeling of saturations from Capillary Pressure vs. log analysis. The match is very good. I personally have performed this type of characterization on at least 30 huge carbonate oil fields in Saudi, and the results shown below are very typical.
