@@ -1,7 +1,7 @@
 # Thomeer-Used-to-Model-High-Pressure-Mercury-Injection-Data
 In this repository we provide the python code used to closure correct and estimate the Thomeer Capillary Pressure parameters used to model High Pressure Mercury Injection (HPMI) data using the Thomeer hyperbola.
 ---
-## Updated January 20, 2022 with python 'try' implementation and calculations of error, Thomeer perm and Mode of Pore Thoat Distribution in Microns (diameter).
+## Updated January 20, 2022 with python 'try' implementation and calculations of error, Thomeer perm and Mode of Pore Thoat Distribution in Microns (diameter). There are now 3 samples that can be used, but the user needs to un-comment out the file name and number of pore systems for that file. 
 ---
 ## Introduction:
 This GitHub repository uses python code to import High Pressure Mercury Injection (HPMI) Core data from Excel and then use a Thomeer hyperbola to model the Thomeer Capillary Pressure parameters as shown below. Ed Clerke used a similar method in Excel with Solver to estimate his Thomeer parameters for each HPMI sample that went into the Rosetta Stone Arab D Carbonate Thomeer database. His Excel spreadsheet is readily available, and a copy of this spreadsheet is included in this repository. We also used fminsearch in Matlab too, but now we can do this in python. We have used these types of software to build our own reservoir-specific core calibration databases in the past for our Reservoir Characterization studies.
