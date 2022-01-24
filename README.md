@@ -4,9 +4,9 @@ In this repository we provide the python code used to closure correct and estima
 ## Updated January 24, 2022 with python 'try' implementation and calculations of error, Thomeer perm and Mode of Pore Thoat Distribution in Microns (diameter). There are now 3 samples that can be used, but the user needs to un-comment out the file name, number of pore systems, Sample Number and Closure Correction all on one line for the HPMI sample file that you want to try. We have added an option to create *.png image from the Final Plot too. 
 
 ## Right now our Thomeer Workflow has all of the Closure Corrections by sample as a curve called Closure. We think it is best to use a series of cross plots in Geolog or python to pick this Closure Correction from the HPMI data up front before starting on the Thomeer Analysis of the HPMI data. The Closure Correction is given in the same line as the selection of the Sample file that you want. We also have a curve called NO_PORE_SYS that is used to instruct the Notebook as to how many pore systems to solve for in the process. In this Jupyter Notebook we also have an Automatic option (‘YES’,’NO’) that if Auto=‘NO’, then it will allow you to make your own picks:
--Pd1
--BV1 & Pd2 if 2 Pore Systems
--BVtotal if 2 Pore Systems
+      -Pd1
+      -BV1 & Pd2 if 2 Pore Systems
+      -BVtotal if 2 Pore Systems
 ---
 ## Introduction:
 This GitHub repository uses python code to import High Pressure Mercury Injection (HPMI) Core data from Excel and then use a Thomeer hyperbola to model the Thomeer Capillary Pressure parameters as shown below. Ed Clerke used a similar method in Excel with Solver to estimate his Thomeer parameters for each HPMI sample that went into the Rosetta Stone Arab D Carbonate Thomeer database. His Excel spreadsheet is readily available, and a copy of this spreadsheet is included in this repository. We also used fminsearch in Matlab too, but now we can do this in python. We have used these types of software to build our own reservoir-specific core calibration databases in the past for our Reservoir Characterization studies.
