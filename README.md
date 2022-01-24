@@ -8,6 +8,8 @@ In this repository we provide the python code used to closure correct and estima
       1) Pd1
       2) BV1 & Pd2 if 2 Pore Systems
       3) BVtotal if 2 Pore Systems
+### If Auto = 'YES' and your sample has 2 pore systems, then you would still need to pick Pd2 and BV1 from item #2 above.
+### You can very easily add your own HPMI data files to the ./data subdirectory using the same format as the other samples and add these files to the Notebook.
 ---
 ## Introduction:
 This GitHub repository uses python code to import High Pressure Mercury Injection (HPMI) Core data from Excel and then use a Thomeer hyperbola to model the Thomeer Capillary Pressure parameters as shown below. Ed Clerke used a similar method in Excel with Solver to estimate his Thomeer parameters for each HPMI sample that went into the Rosetta Stone Arab D Carbonate Thomeer database. His Excel spreadsheet is readily available, and a copy of this spreadsheet is included in this repository. We also used fminsearch in Matlab too, but now we can do this in python. We have used these types of software to build our own reservoir-specific core calibration databases in the past for our Reservoir Characterization studies.
