@@ -5,11 +5,13 @@ In this repository we provide the python code used to closure correct and estima
 
 ### Right now our Thomeer Workflow has all of the Closure Corrections by sample as a constant called Closure. We think it is best to use a series of cross plots in Geolog or python matplotlib to pick this Closure Correction from the HPMI data up front before starting on the Thomeer Analysis of the HPMI data. The Closure Correction is given in the same line as the selection of the Sample file that you select. We also have a curve called NO_PORE_SYS that is used to instruct the Notebook as to how many pore systems to solve for in this process. In this Jupyter Notebook we also have an Automatic option (‘YES’,’NO’) that if Auto=‘NO’, then the program will allow you to make your own picks for the following:
 
-      1) Pd1
-      2) BV1 & Pd2 if 2 Pore Systems
-      3) BVtotal if 2 Pore Systems
+      1) Pd1 (Closure Correction is already input as a curve). If Auto='YES', then Pd1 is automatically picked. 
+      2) BV1 & Pd2 if there are 2 Pore Systems used in Auto = 'NO' or 'YES'.
+      3) BVtotal if 2 Pore Systems in Auto = 'NO'.
+
 ### If Auto = 'YES' and your sample has 2 pore systems, then you would still need to pick Pd2 and BV1 from item #2 above.
-### You can very easily add your own HPMI data Excel file(s) to the ./data subdirectory using the same format as the other samples and add the file inputs to the Notebook in order to load the file(s).
+
+### You can very easily add your own HPMI data Excel file(s) to the ./data subdirectory using the same format as the other samples, and add the file inputs to the Notebook in order to load the file(s).
 ---
 ## Introduction:
 This GitHub repository uses python code to import High Pressure Mercury Injection (HPMI) Core data from Excel and then use a Thomeer hyperbola to model the Thomeer Capillary Pressure parameters as shown below. Ed Clerke used a similar method in Excel with Solver to estimate his Thomeer parameters for each HPMI sample that went into the Rosetta Stone Arab D Carbonate Thomeer database. His Excel spreadsheet is readily available, and a copy of this spreadsheet is included in this repository. We also used fminsearch in Matlab too, but now we can do this in python. We have used these types of software to build our own reservoir-specific core calibration databases in the past for our Reservoir Characterization studies.
