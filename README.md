@@ -1,20 +1,18 @@
 # Thomeer-Used-to-Model-High-Pressure-Mercury-Injection-Data
 In this repository we provide the python code used to closure correct and estimate the Thomeer Capillary Pressure parameters used to model High Pressure Mercury Injection (HPMI) data using the Thomeer hyperbola.
 ---
-### Updated January 24, 2022 with python 'try' implementation and calculations of error, Thomeer perm and Mode of Pore Thoat Distribution in Microns (diameter). There are now 3 samples that can be used, but the user needs to un-comment out the file name, number of pore systems, Sample Number and Closure Correction all on one line for the HPMI sample file that you want to try. We have added an option to create *.png image from the Final Plot too. 
+### Updated January 31, 2022 with python 'try' implementation and calculations of error, Thomeer perm and Mode of Pore Thoat Distribution in Microns (diameter). There are now 3 samples that can be used, but the user needs to un-comment out the file name, number of pore systems, Sample Number and Closure Correction all on one line for the HPMI sample file that you want to try. We have added an option to create *.png image from the Final Plot too. 
 
-### Right now our Thomeer Workflow has all of the Closure Corrections by sample as a constant called Closure. We think it is best to use a series of cross plots in Geolog or python matplotlib initially to pick this Closure Correction from the HPMI data up front before starting on the Thomeer Analysis of the HPMI data. 
-
-### This initial Closure Correction is given in the same line as the selection of the Sample file that you select. We also have a curve called NO_PORE_SYS that is used to instruct the Notebook as to how many pore systems to solve for in this process. Most HPMI data has issues in the low pressure regime with the mercury conforming around the plug sample. We need to remove this early data because this is not representative of the matrix. This is called a Closure Correction (CC). 
-
-We find this is best with a combination of BVocc vs. Pc Crossplots in Log-Log and Linear-Log as show below:
+### Our Thomeer Workflow has all of the Closure Corrections by sample as a constant called Closure. We think it is best to use a series of cross plots in Geolog or python matplotlib initially to pick this Closure Correction from the HPMI data up front before starting on the Thomeer Analysis of the HPMI data. We find this is best with a combination of BVocc vs. Pc Crossplots in Log-Log and Linear-Log as show below:
 
 ![HPMI_Image](Initial_CC.png)
+
+### This initial Closure Correction is given in the same line as the selection of the Sample file that you select. We also have a curve called NO_PORE_SYS that is used to instruct the Notebook as to how many pore systems to solve for in this process. Most HPMI data has issues in the low pressure regime with the mercury conforming around the plug sample. We need to remove this early data because this is not representative of the matrix. This is called a Closure Correction (CC). 
 
 The HPMI Shg actually has little vaue in making the Closure Correction.
 
 ## Closure Corrections if pick_cc='PICK':
-However, we have found a way to create a Pore Throat Distribution PTD (Micron size of pore throats vs. Delta BVocc) and use this plot for another assessment of the Closure Correction. We actually make a pick in Microns and then find out at what element in the array the CC pick occurs and use the corresponding BVocc at that same array element. 
+However, we have found a way to create a Pore Throat Distribution PTD (Micron size of pore throats vs. Delta BVocc) and use this plot for another assessment of the Closure Correction. We actually make a pick in Microns and then determine which element in the array the CC pick occurs and use the same corresponding element for BVocc. 
 
 ![HPMI_Image](CC_Distributions.svg)
 
