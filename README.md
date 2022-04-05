@@ -5,7 +5,7 @@ In this repository we provide the python code used to closure correct and estima
 
 ### Our Thomeer Workflow has all of the Closure Corrections by sample as a constant called Closure. We think it is best to use a series of cross plots in Geolog or python matplotlib initially to pick this Closure Correction from the HPMI data up front before starting on the Thomeer Analysis of the HPMI data. We find this is best with a combination of BVocc vs. Pc Crossplots in Log-Log and Linear-Log as show below:
 
-![HPMI_Image](Initial_CC.png)
+>![HPMI_Image](Initial_CC.png)
 
 ### This initial Closure Correction is given in the same line as the selection of the Sample file that you select. We also have a curve called NO_PORE_SYS that is used to instruct the Notebook as to how many pore systems to solve for in this process. Most HPMI data has issues in the low pressure regime with the mercury conforming around the plug sample. We need to remove this early data because this is not representative of the matrix. This is called a Closure Correction (CC). 
 
@@ -14,7 +14,7 @@ The HPMI Shg actually has little vaue in making the Closure Correction.
 ## Closure Corrections if pick_cc='PICK':
 However, we have found a way to create a Pore Throat Distribution PTD (Micron size of pore throats vs. Delta BVocc) and use this plot for another assessment of the Closure Correction. We actually make a pick in Microns and then determine which element in the array the CC pick occurs and use the same corresponding element for BVocc. 
 
-![HPMI_Image](CC_Distributions.svg)
+>![HPMI_Image](CC_Distributions.svg)
 
 In this Jupyter Notebook we also have an Automatic option (‘YES’,’NO’) that if Auto=‘NO’, then the program will allow you to make your own picks for the following:
 
@@ -29,7 +29,7 @@ In this Jupyter Notebook we also have an Automatic option (‘YES’,’NO’) t
 ## Introduction:
 This GitHub repository uses python code to import High Pressure Mercury Injection (HPMI) Core data from Excel and then use a Thomeer hyperbola to model the Thomeer Capillary Pressure parameters as shown below. Ed Clerke used a similar method in Excel with Solver to estimate his Thomeer parameters for each HPMI sample that went into the Rosetta Stone Arab D Carbonate Thomeer database. His Excel spreadsheet is readily available, and a copy of this spreadsheet is included in this repository. We also used fminsearch in Matlab too, but now we can do this in python. We have used these types of software to build our own reservoir-specific core calibration databases in the past for our Reservoir Characterization studies.
 
-![HPMI_Image](HPMI.png)
+>![HPMI_Image](HPMI.png)
 
 ## How it Works:
 The following animated image illustrates how this software operates. We start with the original HPMI data. The first step is to locate the point on the HPMI curve that represents the point where real data begins and not the HPMI data representing surface conformance around the plug sample. We also select the Initial Displacement Pressure (Pd1) for the sample for the first pore system too. We find that most carbonate rocks have bi-modal pore throat distributions representing two pore systems as shown in the example below. The selection of this point is performed with just a click on the Graphical User Interface (GUI) where this occurs. 
@@ -40,7 +40,7 @@ The third step is to select the Total porosity for the HPMI data called BVtotal 
 
       BV2 = BVtotal - BV1
 
-![HPMI_Image](Thomeer_Parameter_fitting.gif)
+>![HPMI_Image](Thomeer_Parameter_fitting.gif)
 
 This program uses Scipy Optimize Curve_fit to estimate the appropriate Thomeer parameters necessary to model the HPMI data. The points selected from the GUIs are used to estimate boundary conditions for these estimations, and the estimations for this example are shown below:
 
@@ -56,12 +56,12 @@ https://github.com/Philliec459/Geolog-Used-to-Automate-the-Characterization-Work
 
 In the above workflows we have used hundreds of HPMI samples as calibration. In the image below we are showing the Porosity vs. Permeability cross plot in the upper left for all the calibration samples used in Ed Clerke's Rosetta Stone Carbonate Arab D reservoir study. The colors represent different Petrophysical Rock Type as determined by Clerke. We typically select a small group of poro-perm samples, and the Pc curves from this small group of selected samples is then shown in the lower left part of the figure. The black Pc curve is the upscaled Pc curve from the selected samples, and the black bars in the histograms represent the median value for the selected samples. In our saturation-height modeling we use the upscaled Pc curves that vary level-by-level because of the changing reservoir quality of the rock along the wellbore.
 
-![HPMI_Image](Thomeer_Pc_and_Thomeer_Parameters2.gif)
+>![HPMI_Image](Thomeer_Pc_and_Thomeer_Parameters2.gif)
 
 ## Modeling of Saturations Using Thomeer Capillary Pressure Parameters: 
 The following image shows one example from our modeling of saturations from Capillary Pressure vs. log analysis. The match is very good. I personally have performed this type of characterization on at least 30 huge carbonate oil fields in Saudi Arabia, and the results shown below are very typical.
 
-![HPMI_Image](logsats.gif)
+>![HPMI_Image](logsats.gif)
 
 ---
 1 Clerke, E. A., Mueller III, H. W., Phillips, E. C., Eyvazzadeh, R. Y., Jones, D. H., Ramamoorthy, R., Srivastava, A., (2008) “Application of Thomeer Hyperbolas to decode the pore systems, facies and reservoir properties of the Upper Jurassic Arab D Limestone, Ghawar field, Saudi Arabia: A Rosetta Stone approach”, GeoArabia, Vol. 13, No. 4, p. 113-160, October 2008.
